@@ -1,5 +1,5 @@
 var video=document.getElementById("video");
-function on_cam_success(stream);
+function on_cam_success(stream)
 {
 	video.srcObject=stream;
 }
@@ -12,7 +12,7 @@ function on_cam_error(err)
 var constraints={audio:false,video:true};
 navigator.mediaDevices.getUserMedia(constraints)
 
-then(on_cam_success)
+.then(on_cam_success)
 
 .catch(on_cam_error);
 
